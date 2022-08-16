@@ -277,11 +277,11 @@
             transform: translateX(-50%);
         }
 
-        @media (max-height: 675px) {
-            .price {
-                position: relative;
-            }
-        }
+        /*@media (max-height: 675px) {*/
+        /*    .price {*/
+        /*        position: relative;*/
+        /*    }*/
+        /*}*/
 
         .exit_bt {
             display: block;
@@ -599,7 +599,33 @@
 
 /*=============================*/
 
+        @media only screen
+        and (min-device-width: 375px)
+        and (max-device-width: 667px)
+        and (-webkit-min-device-pixel-ratio: 2)
+        and (orientation: portrait)
+        {
+            #service {
+                padding: 2px;
+            }
+            .live_section {
+                padding: 0 15px;
+            }
+            .text {
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
+            input {
+                height: 45px;
+            }
+            .submit_bt {
+                padding: 10px 10px;
+            }
+            .main_image img {
+                width: 70%;
+            }
 
+        }
 
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
