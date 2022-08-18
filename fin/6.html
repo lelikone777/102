@@ -24,11 +24,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            height: 100%;
+        }
+
         body {
             color: #eaeaea;
             background: #181818;
             font-family: 'Helvetica', sans-serif;
             font-size: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         input[type="submit"],
@@ -59,7 +67,8 @@
             text-align: center;
             width: 100%;
             max-width: 480px;
-            margin: auto;
+            /*margin: auto;*/
+            margin: 0 auto;
         }
 
         .header {
@@ -275,28 +284,6 @@
             display: none;
             color: red;
         }
-
-        .price {
-            margin: 10px auto 0;
-            display: block;
-            text-align: center;
-            font-size: 12px;
-
-            line-height: 12px;
-            color: #ffffff;
-            font-weight: 700;
-
-            position: absolute;
-            bottom: 3px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /*@media (max-height: 715px) {*/
-        /*    .price {*/
-        /*        position: relative;*/
-        /*    }*/
-        /*}*/
 
         .exit_bt {
             display: block;
@@ -538,51 +525,96 @@
             margin-bottom: 12px;
         }
 
+        .price {
+            /*margin: 20px auto 0;*/
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+
+            line-height: 12px;
+            color: #ffffff;
+            font-weight: 700;
+
+            position: absolute;
+            bottom: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         /*=============================*/
 
-        @media only screen
-        and (min-device-width: 375px)
-        and (max-device-width: 667px)
-        and (-webkit-min-device-pixel-ratio: 2)
-        and (orientation: portrait)
+        /*@media only screen*/
+        /*and (min-device-width: 375px)*/
+        /*and (max-device-width: 667px)*/
+        /*and (-webkit-min-device-pixel-ratio: 2)*/
+        /*and (orientation: portrait) {*/
+        /*    #service {*/
+        /*        !*padding: 2px;*!*/
+        /*    }*/
+
+        /*    h1 {*/
+        /*        font-size: 18px;*/
+        /*        line-height: 1;*/
+        /*    }*/
+
+        /*    .text {*/
+        /*        margin-top: 6px;*/
+        /*        margin-bottom: 6px;*/
+        /*    }*/
+
+        /*    input {*/
+        /*        height: 45px;*/
+        /*    }*/
+
+        /*    .submit_bt {*/
+        /*        padding: 10px 10px;*/
+        /*    }*/
+
+        /*    .main_image img {*/
+        /*        width: 80%;*/
+        /*    }*/
+
+        /*    .girl_row_img {*/
+        /*        width: 60px;*/
+        /*        height: 60px;*/
+        /*    }*/
+
+        /*    .label {*/
+        /*        font-size: 14px;*/
+        /*        line-height: 1;*/
+        /*        margin: 0;*/
+        /*    }*/
+
+        /*    #service p:first-of-type {*/
+        /*        font-size: 22px;*/
+        /*    }*/
+
+        /*    .main_image img {*/
+        /*        width: 60%;*/
+        /*    }*/
+        /*}*/
+
+        @media (max-height: 715px)
+        and (orientation: landscape)
         {
-            #service {
-                /*padding: 2px;*/
-            }
-            h1 {
-                font-size: 18px;
-                line-height: 1;
-            }
-            .text {
-                margin-top: 6px;
-                margin-bottom: 6px;
-            }
-            input {
-                height: 45px;
-            }
-            .submit_bt {
-                padding: 10px 10px;
-            }
-            .main_image img {
-                width: 80%;
-            }
-            .girl_row_img {
-                width: 60px;
-                height: 60px;
-            }
-            .label {
-                font-size: 14px;
-                line-height: 1;
-                margin: 0;
-            }
-            #service p:first-of-type {
-                font-size: 22px;
-            }
-            .main_image img {
-                width: 60%;
+            .price {
+                position: relative;
             }
         }
+
+        @media
+            /*(max-height: 500px) */
+            /*and */
+        (orientation: portrait)
+        {
+            .price {
+                position: relative;
+            }
+        }
+
+
+
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -728,8 +760,8 @@
                 </a>
             </div>
         </div>
-        <div class="price">30 ks/day</div>
     </div>
+    <div class="price">30 ks/day</div>
 </body>
 
 </html>
